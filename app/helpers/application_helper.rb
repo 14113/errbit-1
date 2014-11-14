@@ -2,7 +2,8 @@ module ApplicationHelper
   def alert_class(name)
     {
       :alert  => 'danger',
-      :notice => 'success'
+      :notice => 'success',
+      :success => 'success'
     }[name]
   end
 
