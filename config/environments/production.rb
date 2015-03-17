@@ -50,6 +50,16 @@ Errbit::Application.configure do
   # Set default host for ActionMailer links
   config.action_mailer.default_url_options = { :host => ENV['ERRBIT_HOST'] } if ENV['ERRBIT_HOST']
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.sendgrid.net',
+    port:                 587,
+    domain:               'errbit-exceptions.herokuapp.com',
+    user_name:            ENV['SENDGRID_USERNAME'],
+    password:             ENV['SENDGRID_PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
   # Enable threaded mode
   # config.threadsafe!
 
