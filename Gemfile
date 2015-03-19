@@ -81,7 +81,7 @@ group :development, :test do
   gem 'airbrake', :require => false
   gem 'pry-rails'
 #  gem 'rpm_contrib'
-#  gem 'newrelic_rpm'
+  gem 'newrelic_rpm'
   gem 'quiet_assets'
 end
 
