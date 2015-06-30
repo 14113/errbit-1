@@ -26,6 +26,7 @@ gem 'rails_autolink'
 # It's for internal use only, and we monkeypatch certain methods
 gem 'hoptoad_notifier', "~> 2.4"
 
+gem 'rack-cors', :require => 'rack/cors'
 
 # Remove / comment out any of the gems below if you want to disable
 # a given issue tracker, notification service, or authentication.

@@ -45,6 +45,13 @@ module Errbit
       g.fixture_replacement :fabrication
     end
 
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
     # Enable the mongoid identity map for performance
     Mongoid.identity_map_enabled = true
 
